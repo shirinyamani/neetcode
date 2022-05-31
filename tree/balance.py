@@ -1,23 +1,29 @@
-class Tree:
-    def __init__(self,value= None, left=None, right=None):
+class Tree(object):
+    def __init__(self,value= 0, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
 
-    def isBalanced(self, root):
+class Solution:
+    def isBalanced(self,root):
+        if not root:
+            return True
+        self.ans = True
 
-        def dfs(root):
-            if not root:
-                return [True]
-
+        def dfs(root): #it returns the height of each subtree
             left_h = dfs(root.left)
             right_h = dfs(root.right)
 
-            balanced= (left_h[0] and right_h[0] and
-                            abs(left_h[1]-right_h[1] <1))
+            if abs(left_h - right_h) > 1:
+                self.ans = False
 
-            return [balanced, 1 + max(left_h[1], right_h[1])]
-        return dfs(root)[0]
+            return 1+ max(left_h,right_h)  #height of the left n right subtree
+
+        dfs(root)
+        return self.ans
+
+
+       
 
 if __name__ =="__main__":
-    print(isinstance([[3,9,20,None,None,15,7]]))
+    print(Solution.isBalanced([[3,9,20,None,None,15,7]]))
