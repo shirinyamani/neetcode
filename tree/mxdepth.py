@@ -7,8 +7,8 @@ class Tree:
         self.right = right
         self.value = value
 
-class Solution:
-    def maxdep(root): #mx depth actually means the number of levels untill null point, right?
+
+    def maxdep(self, root): #mx depth actually means the number of levels untill null point, right?
         level = 0
         q = deque([root]) #means getting out, instead of using pop 
 
@@ -27,6 +27,7 @@ class Solution:
         return level
 
 
-
+if __name__ == "__main__":
+    print(maxdep([3,9,20,None,None,15,7]))
 
     
