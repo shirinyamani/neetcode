@@ -2,7 +2,6 @@ from collections import deque
 
 
 #Solution 1
-
 def levelorder(root): #idea is to have the node values and just add them to the list
     q = deque()
     res = []
@@ -26,7 +25,6 @@ def levelorder(root): #idea is to have the node values and just add them to the 
     return res
 
 #Solution 2
-
 def levelorder1(root):
     res, q = [], deque([(root,0)])
 
