@@ -4,4 +4,4 @@
 
 - **Recursion** ---> **Stack** (remember the the russian dolls exp.)
     - **DFS** uses **Recursion** so ---> **Stack**
-- Diameter/balance ---> askin for the depth of the three/ levels/ bfs usage
+- Questions like levelOrderTraversal or SideView that is kinda LevelbyLevel, use the **val** and saving it in a list tho! like these: [LevelOrder](https://leetcode.com/problems/binary-tree-level-order-traversal/) + [SideView](https://leetcode.com/problems/binary-tree-level-order-traversal/) 
